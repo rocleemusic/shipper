@@ -37,13 +37,14 @@ Calibration run — build all tiers regardless of leverage order to log real pro
 | Tier | Material | Status | File |
 |------|----------|--------|------|
 | 1 | Pitch blurb | ✓ BUILT | `sonar-blurb.md` |
-| 1 | README hook polish | FLAG | See remaining track — hook buries the methodology |
-| 2 | Landing page | ✓ BUILT | `sonar-landing-copy.md` (content for OD visual build) |
+| 1 | README hook polish | FLAG | See remaining track — current lead buries the hook |
+| 2 | Landing page | ✓ BUILT via OD | `sonar-landing/index.html` — OD project `sonar-landing-8264`, run `f1db2ac8` succeeded |
+| 2 | Landing content brief | ✓ BUILT | `sonar-landing-copy.md` |
 | 3 | 60-second script + VO | ✓ BUILT | `sonar-video-script.md` |
 | 4 | Judge guide | ✓ BUILT | `sonar-judge-guide.md` |
 | 4 | Founder story | ✓ PRESENT | `_build/founder-story.md` (authored, feeds deck Slide 7) |
-| 5 | Pitch deck | ✓ BUILT | `sonar-deck/index.html` |
-| 6 | Animated flow | ✓ BUILT | `SonarDuel.tsx` — registered in `my-animations/animation-studio`; storyboard in `sonar-duel-storyboard.md` |
+| 5 | Pitch deck | ✓ BUILT | `sonar-deck/index.html` (CCI-branded 8-slide portable HTML) |
+| 6 | Animated flow | ✓ SMOKE PASS | `SonarDuel.tsx` — `out/sonar-duel-still.png` written; storyboard in `sonar-duel-storyboard.md`; full render gated on VO |
 
 ---
 
