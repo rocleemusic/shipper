@@ -1,60 +1,56 @@
-# Sonar × CCI — 60-Second Pitch Video
+# Sonar × CCI — 60-Second Pitch Video (v2)
 
-Two parts in one file: the shot plan (what's on screen) and the spoken VO script (the words alone, to record). Record only the VO block — nothing else.
+Source flow: sonar-deck (8-slide arc) + _build/founder-story.md (voice).
+Remotion animation is self-contained — VO is additive, not a gate.
 
 ---
 
 ## Part 1 — Shot plan
 
-| Time | On screen | VO line |
-|------|-----------|---------|
-| 0:00–0:08 | Split screen. Input centered: "Qualify Northwind Studios." Left column (Generic AI) starts typing — confident paragraph building. Right column (Sonar): `DECLINE.` appears immediately; reason drops below. | "Same studio. Two AIs." |
-| 0:08–0:18 | Hold on the split. Generic AI paragraph scrolls: "Northwind Studios looks like a strong fit. They're an indie action-adventure studio…" Left column keeps filling. | "Generic AI writes a confident paragraph. Strong fit. Recommend reaching out." |
-| 0:18–0:30 | Zoom to Sonar column. `DECLINE.` in magenta. Reason text: "No funding from any source detected — publisher, raise, grant, nothing. Can't hire on normal terms." Score: `58/107 · funding 0 · audio gap 22`. | "Sonar runs the rubric. No funding from any source. Can't hire on normal terms. DECLINE." |
-| 0:30–0:42 | New input: "Qualify Lumen Hollow Games." Sonar column builds — score 69, `Catalyst: October ship date`, `0 audio in credits`. `PURSUE` drops. Email draft slides in below. | "New prospect. Ship date on the calendar. No audio team. Score 69. PURSUE — email drafted, ready to send." |
-| 0:42–0:52 | Four verdict cards animate in: PURSUE / NURTURE / DECLINE / FLAG, each with one line. Then col-15 record pasting into a sheet. | "Four verdicts. Every run. Output pastes straight into your target sheet." |
-| 0:52–1:00 | Sonar name. Repo URL: `github.com/rocleemusic/sonar-operator`. CCI eye mark, bottom corner. Hold. | "Built by the person running this workflow. Sonar." |
+| Time | On screen | VO |
+|------|-----------|-----|
+| 0:00–0:06 | Three lines appear sequentially: "Studios hit your inbox every week." → "Most aren't right." → "Generic AI writes a confident paragraph about all of them anyway." | "Studios hit your inbox every week. Most aren't right. Generic AI writes a confident paragraph about all of them anyway." |
+| 0:06–0:22 | Split screen. Input: "Qualify Northwind Studios." Generic AI column starts typing — full confident paragraph builds slowly. Sonar column: magenta border, header visible, waits. | "Same prompt. Two answers." [hold for typing] |
+| 0:22–0:30 | Sonar: DECLINE drops in magenta. Reason types in. Score line appears. Payoff: "Sonar doesn't profile studios. It screens them." in lime. | "Sonar runs the rubric. No funding from any source. Can't hire on normal terms. DECLINE." |
+| 0:30–0:37 | Header: "One verdict, every time." Subhead: "First-pass triage, not a pitch generator." Four verdict cards animate in staggered. | "One verdict, every run. PURSUE means the email's drafted. DECLINE is brief, professional, done." |
+| 0:37–0:52 | Clean text, three lines appear sequentially. Personal voice. | "I got into AI to get out of a spreadsheet. The scoring, the studios — the judgment was already in my workspace. I just handed it over." |
+| 0:52–1:00 | "Drop it in a project." then large "Sonar." in white, then github URL in magenta. Hold. | "Drop it in a project. Sonar." |
 
 ---
 
 ## Part 2 — Spoken VO script (record this, verbatim)
 
 ```
-Same studio. Two AIs.
+Studios hit your inbox every week. Most aren't right.
+Generic AI writes a confident paragraph about all of them anyway.
 
-Generic AI writes a confident paragraph about Northwind Studios.
-"Strong fit. Indie action-adventure. Recommend reaching out."
+Same prompt. Two answers.
 
 Sonar runs the rubric. No funding from any source —
-publisher, raise, grant, nothing.
-Can't hire on normal terms. DECLINE.
+publisher, raise, or revenue. Can't hire on normal terms. DECLINE.
 
-That's the whole product. Sonar doesn't profile studios. It screens them.
-
-107-point fit framework. Funding is the gate — 30 points.
-Audio gap. Genre. Active dev.
 One verdict, every run.
-
-PURSUE means the email is already drafted.
-NURTURE means it's on the watchlist with a trigger.
+PURSUE means the email's drafted.
 DECLINE is brief, professional, done.
-FLAG is the one call a human needs to make.
 
-Output pastes straight into your target sheet.
+I got into AI to get out of a spreadsheet.
+The scoring, the studios — the judgment was already in my workspace.
+I just handed it over.
 
-Built by the person running this workflow at Clean Cuts Interactive.
-Then the launch operator — built the same day — dogfooded it and produced the deck.
-
-Sonar. github.com/rocleemusic/sonar-operator
+Drop it in a project. Sonar.
 ```
+
+~120 words. Leaves breathing room for typing animation at 0:06–0:22.
 
 ---
 
 ## Bar
-- [x] Opens mid-thought — no setup preamble
-- [x] Shows a decision being made (DECLINE with reason), not a feature tour
-- [x] VO block is clean — record-ready, no stage directions inside it
-- [x] ~147 words. Duel lands in the first eight seconds.
-- [ ] Roc records the VO
-- [ ] Splice VO audio into the Remotion comp (Remotion audio node or ffmpeg)
-- [ ] Final motion review — Roc's eye
+- [x] Opens on problem, not the tool
+- [x] Deck arc: Problem → Proof → Verdicts → Founder → CTA
+- [x] "Not a pitch generator" framing from deck Slide 1, used in Verdicts section
+- [x] Founder voice from _build/founder-story.md — no meta-comment about Shipper
+- [x] No second prospect — removes feature-tour drift
+- [x] Remotion self-contained — VO splices in later, doesn't gate the build
+- [ ] Roc records VO
+- [ ] Splice VO audio into Remotion comp (Audio node or ffmpeg)
+- [ ] Final motion review
