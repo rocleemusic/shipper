@@ -27,6 +27,8 @@ Build down this stack in order. Each piece earns its place before the next; a hi
 5. **Pitch deck** — 8 slides, RDS archetypes (comparison→duel, data→ROI). See `reference/templates/deck-outline.md`.
 6. **Animated flow** — the operator's decision in motion. OD HTML for a lightweight embed; Remotion for a rendered segment. See `reference/tooling.md`.
 
+**Verify before routing past.** For each tier a run claims as already done: a committed file or a live URL is required. A plan entry, a prompt summary, or a build-log intention does not count. If the artifact can't be pointed to, route there — don't descend.
+
 Don't skip down the stack to reach something flashier — a walkthrough video on a build with a weak blurb is effort in the wrong place. Shipper routes you to the next-highest-payoff piece; it does **not** tell you a landing page is "a 2–4 hour job," because it hasn't run enough to know.
 
 **The first run is a calibration run.** Shipper has never produced this stack end to end, so it can't honestly estimate how long any piece takes — which is why this gate routes by payoff, not hours. The first real run (the Sonar dogfood) **deliberately ignores the leverage order and builds the whole stack**, to clear it once and log real production times per piece. Those timings feed back here. Until then, every duration is unknown; route by payoff alone.
