@@ -12,9 +12,9 @@
 
 | Tool | Status | Notes |
 |------|--------|-------|
-| Open Design (MCP) | ✓ REACHABLE | OD MCP server active; `cci-design-system` project available |
-| CCI design system | ✓ PRESENT | `P:\GitHub\cci-design-system\` — tokens linked directly in deck HTML |
-| Remotion | ✓ VERIFIED | Smoke render at `my-animations/animation-studio/out/sonar-duel-smoke.png` confirms SonarDuel comp renders |
+| Open Design (MCP) | ✓ REACHABLE | `list_projects` returned 6 projects; OD daemon active |
+| CCI design system | ✓ PRESENT | `P:\GitHub\cci-design-system\` — id `2f658978`; tokens inlined in deck HTML |
+| Remotion | ✓ VERIFIED | `remotion still` succeeded; `out/sonar-duel-still.png` written. Font fix required: all three CCI comps + ObojimaRecap had unbounded `loadFont` calls blocking renders; patched to limit weights / commented out missing local files. |
 
 ---
 
