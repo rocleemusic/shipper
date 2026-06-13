@@ -18,7 +18,7 @@ The profile binds each category to a real tool (a design tool = Open Design, say
 ## Two modes — drive, or emit the prompt
 Before driving anything, run the profile's **reachability check** for that tool. Then:
 
-- **Reachable:** drive it per the profile's "how to invoke."
+- **Reachable:** drive it per the profile's "how to invoke." For a **design tool** (landing page, deck): use `start_run` with an artifact brief — this drives OD's generative layer to build from the spec. `create_artifact` pushes a file you already wrote; it bypasses the design tool entirely. Deck and landing = `start_run`.
 - **Not reachable — or no profile at all (e.g., Shipper in the cloud):** don't fake the artifact and don't stop. **Emit a ready-to-paste prompt** instead — Shipper's job becomes producing the prompt that a human, or an agent with tool access, runs. Emitting needs no local tools, so it's the universal fallback.
 
 A good emitted prompt carries, every time:
