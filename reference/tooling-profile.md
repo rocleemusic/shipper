@@ -29,7 +29,7 @@ profile:
 
 ## Default profile — this builder's stack (Roc Does Sound)
 - **Design tool → Open Design (MCP).**
-  - *Invoke:* create or import a project linked to the design system — `user:rds-design-system` for RDS, the CCI system for CCI — then `start_run` with the artifact brief, `write_file` / `create_artifact` for files, `get_artifact` to pull the result. Output is **portable HTML**, not locked to OD. Build the design system *first*; never freehand a branded artifact.
+  - *Invoke:* create a **new project** for each artifact (landing page, deck) — never the design system project itself, which is a source of tokens, not an artifact home. Link the design system via its CSS path or `designSystemId`. Use `start_run` with an artifact brief to drive OD's generative layer; pull the result with `get_artifact`. Output is **portable HTML**, not locked to OD. Build the design system *first*; never freehand a branded artifact.
   - *Reachable when:* the OD daemon responds (`list_projects`).
   - The `user:` id is this profile's pointer to wherever the **brand kit** is registered in OD — the one place brand and tooling meet.
 - **Motion tool → Remotion.**
