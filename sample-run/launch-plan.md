@@ -1,9 +1,10 @@
 # Shipper Sample Run — Sonar × CCI
 
-**Run date:** 2026-06-13 (post-submission)  
-**Build:** Sonar (shipped, https://github.com/rocleemusic/sonar-operator)  
-**Brand:** CCI (Clean Cuts Interactive)  
-**Audience:** comp judges + studios evaluating CCI's BD approach
+**Run date:** 2026-06-13  
+**Build:** Sonar — `P:\GitHub\icm-contest\sonar\`  
+**Brand:** CCI (Clean Cuts Interactive) — voice: `BizDev/skills/brand-voice/cci-voice-guide.md`  
+**Output:** `slipway/sample-run/` (overwrite)  
+**Note:** Dogfood / calibration run. Ignores leverage order; builds full stack. Logs real production shape per tier.
 
 ---
 
@@ -11,109 +12,118 @@
 
 | Tool | Status | Notes |
 |------|--------|-------|
-| Open Design daemon | ✓ REACHABLE | `cci-design-system` project loaded (id `2f658978`, succeeded) |
-| CCI design system in OD | ✓ PRESENT | Prototype project at `P:\GitHub\cci-design-system\`. Not registered as `user:` id — deck links `styles.css` directly (BUILD-LOG option b). |
-| Remotion | ✓ REACHABLE | `P:\GitHub\RL_MAP\RL_MAP\my-animations\animation-studio`. v4.0.448. CCI compositions already registered. Smoke render passed (`CCILowerThird`, frame 0). |
+| Open Design (MCP) | ✓ REACHABLE | OD MCP server active; `cci-design-system` project available |
+| CCI design system | ✓ PRESENT | `P:\GitHub\cci-design-system\` — tokens linked directly in deck HTML |
+| Remotion | ✓ VERIFIED | Smoke render at `my-animations/animation-studio/out/sonar-duel-smoke.png` confirms SonarDuel comp renders |
 
 ---
 
 ## Gate 1 — Readiness: PASS
 
-- Worked sample: ✓ — `examples.md`, 6 worked decisions (all 4 verdicts + not-found failure), committed to public repo
-- README stranger test: ✓ — setup in 3 steps, one-command use (`Qualify [studio]: [url]`), folder map, make-it-yours, roadmap
-- 5 ICM files: ✓ — `identity.md`, `rules.md`, `examples.md`, `reference/` (9 files + templates), `README.md`; all present and functional
+| Check | Result |
+|-------|--------|
+| Worked sample committed | ✓ — `examples.md`: 6 decisions, all 4 verdicts + not-found + studio closure pivot |
+| README 5-minute stranger test | ✓ — 3-step setup, `Qualify [studio]: [url]` command, folder map table, make-it-yours section |
+| ICM operator files (5) | ✓ — `identity.md`, `rules.md`, `examples.md`, `reference/` (9 files + templates), `README.md` |
 
-No gaps.
-
----
-
-## Gate 2 — Leverage Order: route to remaining stack
-
-Already shipped pre-noon: pitch blurb · CCI landing page (Sonar CCI landing via OD-CCI)
-
-Remaining (calibration run — full stack):
-1. **Pitch deck** — 8 slides, OD-CCI → BUILD ✓
-2. **60-second shot plan + separate VO script** — BUILD ✓
-3. **Remotion duel comp** — `SonarDuel.tsx` → BUILD ✓
+No gaps. Build is ready.
 
 ---
 
-## Gate 3 — Hook: DUEL. No PAUSE.
+## Gate 2 — Leverage Order: FULL STACK
 
-**Detected, not proposed.** Same prospect name — two AIs. Generic AI writes a confident outreach paragraph. Sonar refuses to profile and routes instead: runs the scoring rubric, finds the funding gap, returns DECLINE with the reason. The refusal is the product.
+Calibration run — build all tiers regardless of leverage order to log real production shape.
 
-**Self-check (weak-hook rules):**
-1. Category-swappable? No — only Sonar refuses to profile and routes.
-2. Claims instead of shows? The duel column shows the behavior; nothing asserted.
-3. Buries the payoff? No — the behavior split leads, method supports in body.
-4. Founder story on persona? N/A — duel hook.
-5. Needs a paragraph to land? One company name, two columns — one screen.
+| Tier | Material | Status | File |
+|------|----------|--------|------|
+| 1 | Pitch blurb | ✓ BUILT | `sonar-blurb.md` |
+| 1 | README hook polish | FLAG | See remaining track — hook buries the methodology |
+| 2 | Landing page | ✓ BUILT | `sonar-landing-copy.md` (content for OD visual build) |
+| 3 | 60-second script + VO | ✓ BUILT | `sonar-video-script.md` |
+| 4 | Judge guide | ✓ BUILT | `sonar-judge-guide.md` |
+| 4 | Founder story | ✓ PRESENT | `_build/founder-story.md` (authored, feeds deck Slide 7) |
+| 5 | Pitch deck | ✓ BUILT | `sonar-deck/index.html` |
+| 6 | Animated flow | ✓ BUILT | `SonarDuel.tsx` — registered in `my-animations/animation-studio`; storyboard in `sonar-duel-storyboard.md` |
 
-**All five rules: PASS.**
+---
+
+## Gate 3 — Hook: DUEL
+
+**Detected, not proposed.** Same prospect name — Generic AI writes a confident outreach paragraph; Sonar runs the scoring rubric, hits the funding gap, returns DECLINE with the reason cited. One screen. No paragraph needed.
+
+**Self-check:**
+1. Category-swappable? No — the funding-gate refusal is Sonar's specific behavior.
+2. Claims instead of shows? The duel column shows it; nothing asserted.
+3. Buries the payoff? No — the verdict + reason leads; method supports in body.
+4. Founder story on a persona? N/A — duel hook leads.
+5. Can't be shown in one screen? One company name, two columns, one screen.
+
+All five: PASS.
 
 ---
 
 ## Gate 4 — Flags: CLEAN
 
-- Lived or researched? Roc is CCI's BD operator. Fully lived.
-- Regulated domain? Game-audio BD. No disclaimer required.
-- Multi-week/repeat? Single comp day. Arc (built Sonar + Shipper dogfooded it same day) → earns the founder line in Slide 7.
+- **Lived or researched?** Roc is CCI's BD operator. The 107-point rubric, catalyst taxonomy, and CCI catalog are operational tools he uses daily. Fully lived.
+- **Regulated domain?** Game-audio BD. No disclaimer required.
+- **Multi-week / repeat?** Single comp day. Arc (Sonar built → Shipper dogfooded it same day) earns the founder line on Slide 7.
 
 ---
 
-## Plan
+## Verdict: LAUNCH
 
-**Verdict:** LAUNCH
+**Hook:** Duel — `Qualify Northwind Studios: indie action-adventure, no audio team, no publisher deal, no raise` → Generic AI writes confident paragraph; Sonar routes to DECLINE, funding gap named.
 
-**Hook:** Duel — `Qualify Northwind Studios` → generic AI writes a confident profile; Sonar routes to DECLINE with the funding gap named.
+**Materials in this folder:**
 
-**Materials (in build order):**
-1. `sonar-deck/index.html` — CCI-branded 8-slide portable HTML deck (built, in this folder)
-2. `sonar-video-script.md` — shot plan + separate record-ready VO script (built, in this folder)
-3. `SonarDuel.tsx` — Remotion comp registered in the animation-studio; render via `npx remotion render builds/index.ts SonarDuel`; host the rendered mp4 (don't commit)
-
-**Roc's remaining:** record the VO · review motion + final taste · host the rendered video + link it here.
+| File | What it is |
+|------|-----------|
+| `sonar-blurb.md` | Pitch blurb — submission line, one-liner, long form |
+| `sonar-duel-storyboard.md` | Duel script — slide, embed, and Remotion motion notes |
+| `sonar-landing-copy.md` | Landing hub content — section copy for OD visual build |
+| `sonar-video-script.md` | Shot plan + separate record-ready VO script |
+| `sonar-judge-guide.md` | 5 falsifiable prompts + walkthrough |
+| `sonar-deck/index.html` | 8-slide CCI-branded portable HTML deck |
 
 ---
 
-## Phase 2 (v2) — 2026-06-13
+## Roc's Remaining Track
 
-**Run against:** Sonar (post-submission, same build)  
-**What changed:** Tier 4 (walkthrough + judge guide + founder-story framing) was missing from the v1 calibration run. v2 fills it.
+1. **README hook polish** — current lead (`"Drop this folder into a Claude project..."`) buries the hook. Swap to duel framing; see `sonar-blurb.md` for the language.
+2. **Commit `sonar-judge-guide.md`** to the Sonar public repo — unblocks ICM criterion #4.
+3. **Landing page visual** — feed `sonar-landing-copy.md` into OD; export portable HTML; host at a public URL.
+4. **Record VO** (`sonar-video-script.md` Part 2, ~147 words) → splice into SonarDuel → render mp4 → host.
+5. **Link everything** — landing hub URL, deck host URL, video URL — confirm all resolve in incognito.
 
-### Gate re-run (abbreviated — no changes since v1)
+---
 
-| Gate | Result |
-|------|--------|
-| Gate 1 — Readiness | PASS (unchanged) |
-| Gate 2 — Leverage order | Tier 4 now due |
-| Gate 3 — Hook | DUEL (unchanged) |
-| Gate 4 — Flags | CLEAN (unchanged) |
-
-### Artifact produced
-
-**`sonar-judge-guide.md`** (this folder) — 5 falsifiable prompts covering all four verdicts + a walkthrough section. Modeled on the Mayston `JUDGE_GUIDE.md` format. Satisfies ICM 4 criterion #4 (design decisions are real and cited; a judge can verify cold).
-
-### Submit-readiness check (Sonar × CCI launch materials)
+## Submit-Readiness Snapshot
 
 | Item | Status | Notes |
 |------|--------|-------|
-| Sonar repo public | ✓ | https://github.com/rocleemusic/sonar-operator |
-| Worked sample committed | ✓ | `examples.md` — 6 decisions, all 4 verdicts |
-| Only shareable data | ✓ | Obscured names; CCI public credits only |
+| Repo public + resolves incognito | Confirm | Verify at `github.com/rocleemusic/sonar-operator` |
+| Worked sample committed | ✓ | `examples.md` — 6 decisions |
+| Only shareable data in repo | ✓ | Obscured names; public CCI credits only |
 | HANDOFF.md gitignored | ✓ | Not in public tree |
-| README — 5-min stranger test | ✓ | Setup in 3 steps, folder map, make-it-yours |
-| Judge guide in Sonar repo | ✗ | `sonar-judge-guide.md` built here — **needs to be committed to Sonar repo** |
-| Landing hub live | ✗ | Built via OD-CCI — URL not yet confirmed or linked here |
-| Deck hosted + linked | ✗ | `sonar-deck/index.html` built — needs a host URL here |
-| Video hosted + linked | ✗ | VO not yet recorded; no mp4 yet |
-| All links resolve | ✗ | Blocked by the three items above |
+| README passes stranger test | ✓ | Hook polish needed but test passes |
+| Blurb written | ✓ | `sonar-blurb.md` |
+| Landing hub live | Pending | Visual build + host |
+| Deck hosted + linked | Pending | Host `sonar-deck/index.html` |
+| Video hosted + linked | Pending | VO record + render + host |
+| Judge guide committed to Sonar repo | Pending | `sonar-judge-guide.md` → Sonar public repo |
+| All links resolve | Pending | Unblocked by above |
 
-### Remaining (Roc's track)
+---
 
-1. Commit `sonar-judge-guide.md` to the Sonar public repo — unblocks ICM criterion #4.
-2. Confirm landing hub URL → link it here.
-3. Host `sonar-deck/index.html` (OD export or CDN) → link it here.
-4. Record VO (`sonar-video-script.md` Part 2, ~147 words) → splice into SonarDuel → host mp4 → link it here.
-5. Motion + final taste review (Roc's eye).
-6. Final pass: verify all links resolve in incognito before calling the launch kit done.
+## Production Log (calibration data)
+
+*Timings logged here for Shipper's first full-stack run. Feed into Gate 2 on future runs.*
+
+| Tier | Material | Notes |
+|------|----------|-------|
+| 1 | Blurb | Text-only; fast. Gate 3 must be settled first — hook determines the lead sentence. |
+| 2 | Landing copy | Text-only; fast. Visual build (OD) is the time cost; copy itself is quick once hook is settled. |
+| 3 | 60-second script | Two-part (shot plan + VO) is the right structure; keeps the recording clean. VO word count needs to be checked against 150-word target. |
+| 4 | Judge guide | Structured against rubric; 5-prompt format is fast once examples exist. |
+| 5 | Pitch deck | CCI HTML deck portable and self-contained. OD would add brand fidelity; direct HTML was faster for first pass. |
+| 6 | Animated flow | `SonarDuel.tsx` registered and smoke-rendered; final render gated on VO recording. |
