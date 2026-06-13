@@ -5,6 +5,8 @@ Two parts in one file: the **shot plan** (what's on screen, with timing) and the
 ## Part 1 — Shot plan
 Beats: 0–10s hook, 10–45s it working on one real input, 45–60s where to get it. Show a decision being made, not a feature tour.
 
+The **duel storyboard** (`duel-storyboard.md`) covers scene 1 (the hook, 0–10s) only. This shot plan covers the full video. When producing the Remotion comp, derive `durationInFrames` from the shot plan's timing column — `total_seconds × fps` (60s × 30fps = 1800 frames). Do not copy duration from any existing comp; derive it here.
+
 | Time | On screen | VO line |
 |---|---|---|
 | 0:00–0:10 | [the hook — duel split, or the problem stated] | [hook line] |
