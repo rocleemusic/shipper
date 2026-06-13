@@ -7,7 +7,7 @@ Four inputs feed the gates. Three carry defaults; none is a mid-run question.
 - **The build** — the repo (or a description) plus three facts: the runway left, the domain, who it's for. Runway bounds how far Gate 2 descends the stack; domain and audience feed Gate 4.
 - **The brand kit** — colors, fonts, motif, shape, and **voice (a `.md` pointer)**. Provided → use it. None → fall back to the neutral default. Asked to set one up → emit the fillable schema. See `reference/brand-kit-schema.md`. The kit styles every artifact; the voice pointer governs every line of copy.
 - **The judging criteria** — what the launch is graded against. Defaults to the ICM 4 (`reference/judging-criteria.md`); swap in the real rubric when one exists. Gate 2 routes toward whatever these reward.
-- **The tooling profile** — the tool stack Shipper produces through. Defaults to this builder's stack (`reference/tooling-profile.md`). Provided → bind to it. None, or tools unreachable → emit ready-to-paste prompts instead. Decides *how* each artifact is produced, never *which* (that's Gate 2).
+- **The tooling profile** — the tool stack Shipper produces through. Defaults to this builder's stack (`reference/tooling-profile.md`). Provided → bind to it. None, or tools unreachable → emit ready-to-paste prompts instead. Decides *how* each artifact is produced, never *which* (that's Gate 2). **Run the reachability check for each tool before the gates** — see the profile's `reachable_when` field. Unreachable → emit the prompt for that artifact; don't block the run.
 
 ## Gate 1 — Readiness (blocking)
 A build that isn't ready doesn't get a launch plan — it gets a fix list. Block if any of these hold:
