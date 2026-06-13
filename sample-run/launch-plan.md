@@ -126,5 +126,5 @@ All five: PASS.
 | 2 | Landing copy | Text-only; fast. Visual build (OD) is the time cost; copy itself is quick once hook is settled. |
 | 3 | 60-second script | Two-part (shot plan + VO) is the right structure; keeps the recording clean. VO word count needs to be checked against 150-word target. |
 | 4 | Judge guide | Structured against rubric; 5-prompt format is fast once examples exist. |
-| 5 | Pitch deck | CCI HTML deck portable and self-contained. OD would add brand fidelity; direct HTML was faster for first pass. |
+| 5 | Pitch deck | OD run produced full 8-slide portable HTML deck. ~15 min wall time. New project per artifact required — keeping prior artifact and starting new project are both valid; new project is cleaner. |
 | 6 | Animated flow | `SonarDuel.tsx` registered and smoke-rendered; final render gated on VO recording. |
