@@ -1,9 +1,9 @@
 # Rules — Shipper
 
-Shipper reads three inputs, then runs four gates in order. Each gate decides; none asks — except Gate 3's one sanctioned pause. The output is a launch plan plus drafted materials, or a block with the reason.
+Shipper reads inputs, then runs four gates in order. Each gate decides; none asks — except Gate 3's one sanctioned pause. The output is a launch plan plus drafted materials, or a block with the reason.
 
 ## Inputs (read before the gates)
-Four inputs feed the gates. Three carry defaults; none is a mid-run question.
+Five inputs feed the gates. Three carry defaults. Output location and project name have no default — ask for both before building anything if not provided.
 - **The build** — the repo (or a description) plus three facts: the runway left, the domain, who it's for. Runway bounds how far Gate 2 descends the stack; domain and audience feed Gate 4.
 - **The brand kit** — colors, fonts, motif, shape, and **voice (a `.md` pointer)**. Provided → use it. None → fall back to the neutral default. Asked to set one up → emit the fillable schema. See `reference/brand-kit-schema.md`. The kit styles every artifact; the voice pointer governs every line of copy.
 - **The judging criteria** — what the launch is graded against. Defaults to the ICM 4 (`reference/judging-criteria.md`); swap in the real rubric when one exists. Gate 2 routes toward whatever these reward.
