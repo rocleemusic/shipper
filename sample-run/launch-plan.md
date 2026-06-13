@@ -43,7 +43,7 @@ Calibration run — build all tiers regardless of leverage order to log real pro
 | 3 | 60-second script + VO | ✓ BUILT | `sonar-video-script.md` |
 | 4 | Judge guide | ✓ BUILT | `sonar-judge-guide.md` |
 | 4 | Founder story | ✓ PRESENT | `_build/founder-story.md` (authored, feeds deck Slide 7) |
-| 5 | Pitch deck | ✓ BUILT | `sonar-deck/index.html` (CCI-branded 8-slide portable HTML) |
+| 5 | Pitch deck | ✓ BUILT via OD | `sonar-deck/index.html` — OD project `sonar-deck-82a9`, run `35b55c4e` succeeded |
 | 6 | Animated flow | ✓ SMOKE PASS | `SonarDuel.tsx` — `out/sonar-duel-still.png` written; storyboard in `sonar-duel-storyboard.md`; full render gated on VO |
 
 ---
