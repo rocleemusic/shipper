@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sonar — Prospect Qualification for Game Audio BD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #1a1a1a;
+      --ink:     #0d0d0d;
+      --surface: #242424;
+      --fg:      #ffffff;
+      --body:    #f2f2f2;
+      --muted:   #8a8a8a;
+      --accent:  #ec008c;
+      --lime:    #ccff00;
+      --neutral-border: #3a3a3a;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg);
+      color: var(--body);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .top-bar {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: var(--accent);
+      z-index: 999;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 36px;
+    }
+
+    section { padding: 96px 0; }
+    section + section { border-top: 1px solid #222; }
+
+    .eyebrow {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 44px;
+    }
+
+    /* HERO */
+    .hero {
+      padding-top: 168px;
+      padding-bottom: 96px;
+    }
+
+    .hero-headline {
+      font-size: clamp(2.25rem, 5.5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+      color: var(--fg);
+      margin-bottom: 28px;
+    }
+
+    .hero-headline .magenta { color: var(--accent); }
+
+    .hero-subhead {
+      font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+      color: var(--muted);
+      max-width: 480px;
+      line-height: 1.75;
+      font-weight: 400;
+      margin-bottom: 44px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background-color: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 14px 36px;
+      transition: opacity 0.15s;
+    }
+
+    .btn-primary:hover { opacity: 0.82; }
+
+    /* THREE THINGS */
+    .three-things-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background-color: #222;
+    }
+
+    .thing-card {
+      background-color: var(--surface);
+      padding: 40px 32px;
+    }
+
+    .thing-label {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--fg);
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
+    }
+
+    .thing-desc {
+      font-size: 0.84rem;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    /* THE DUEL */
+    .duel-outer {
+      background-color: var(--ink);
+      padding: 96px 0;
+      border-top: 1px solid #222;
+    }
+
+    .duel-input-wrap {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .duel-input-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .duel-input-text {
+      display: inline-block;
+      font-size: 0.84rem;
+      font-style: italic;
+      color: var(--muted);
+      background: var(--surface);
+      border: 1px solid #2e2e2e;
+      padding: 14px 28px;
+      max-width: 600px;
+      width: 100%;
+      line-height: 1.65;
+    }
+
+    .duel-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background-color: #1a1a1a;
+      margin-bottom: 40px;
+    }
+
+    .duel-col {
+      background-color: var(--surface);
+      padding: 36px;
+    }
+
+    .duel-col.generic { border-top: 3px solid var(--neutral-border); }
+    .duel-col.sonar   { border-top: 3px solid var(--accent); }
+
+    .duel-col-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    .duel-generic-text {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.75;
+      font-style: italic;
+    }
+
+    .sonar-verdict {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: -0.025em;
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .sonar-reason {
+      font-size: 0.88rem;
+      color: var(--body);
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .sonar-meta {
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      font-family: 'Courier New', monospace;
+    }
+
+    .duel-payoff {
+      text-align: center;
+      font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+      font-weight: 700;
+      color: var(--lime);
+      letter-spacing: -0.01em;
+      margin-bottom: 40px;
+    }
+
+    .video-placeholder {
+      background: #141414;
+      border: 1px solid #2a2a2a;
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: border-color 0.15s;
+    }
+
+    .video-placeholder:hover { border-color: #3a3a3a; }
+
+    .video-placeholder-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+    }
+
+    /* WHO BUILT IT */
+    .founder-body {
+      font-size: 1rem;
+      color: var(--body);
+      line-height: 1.85;
+      max-width: 600px;
+      margin-bottom: 28px;
+      font-weight: 400;
+    }
+
+    .founder-tagline {
+      font-size: 0.875rem;
+      color: var(--muted);
+      font-style: italic;
+      line-height: 1.65;
+      max-width: 560px;
+    }
+
+    /* GET IT */
+    .repo-url {
+      display: block;
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      font-weight: 700;
+      color: var(--accent);
+      text-decoration: none;
+      letter-spacing: -0.015em;
+      word-break: break-all;
+      margin-bottom: 56px;
+      transition: opacity 0.15s;
+    }
+
+    .repo-url:hover { opacity: 0.75; }
+
+    .setup-steps { list-style: none; margin-bottom: 52px; }
+
+    .setup-step {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 20px;
+      padding: 22px 0;
+      border-top: 1px solid #252525;
+      align-items: start;
+    }
+
+    .setup-step:last-child { border-bottom: 1px solid #252525; }
+
+    .step-num {
+      font-size: 0.7rem;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+      padding-top: 3px;
+    }
+
+    .step-text {
+      font-size: 0.88rem;
+      color: var(--body);
+      line-height: 1.7;
+    }
+
+    .step-paste {
+      display: block;
+      margin-top: 10px;
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-family: 'Courier New', monospace;
+      font-style: normal;
+      letter-spacing: 0.02em;
+    }
+
+    .secondary-links { display: flex; gap: 28px; }
+
+    .secondary-link {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-bottom: 1px solid #333;
+      padding-bottom: 2px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .secondary-link:hover { color: var(--fg); border-bottom-color: #555; }
+
+    /* FOOTER */
+    footer { padding: 36px 0; border-top: 1px solid #202020; }
+
+    .footer-brand {
+      font-size: 0.68rem;
+      font-weight: 600;
+      font-variant-caps: small-caps;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 720px) {
+      section { padding: 68px 0; }
+      .duel-outer { padding: 68px 0; }
+      .hero { padding-top: 120px; padding-bottom: 68px; }
+      .three-things-grid { grid-template-columns: 1fr; }
+      .duel-columns { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) { .container { padding: 0 20px; } }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar"></div>
+
+  <!-- 1. HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-headline">
+        Sonar &mdash; first-pass triage,<br>
+        <span class="magenta">not a pitch generator.</span>
+      </h1>
+      <p class="hero-subhead">
+        Paste a studio name or URL. Get one verdict and the response it calls for.
+        Sonar decides &mdash; it never hands the question back.
+      </p>
+      <a href="https://github.com/rocleemusic/sonar-operator" class="btn-primary">Get Sonar</a>
+    </div>
+  </section>
+
+  <!-- 2. THREE THINGS -->
+  <section>
+    <div class="container">
+      <p class="eyebrow">What it does</p>
+      <div class="three-things-grid">
+        <div class="thing-card">
+          <p class="thing-label">Reads a prospect.</p>
+          <p class="thing-desc">Studio name, URL, or inbound inquiry, scored against a 107-point fit framework and a live catalyst check.</p>
+        </div>
+        <div class="thing-card">
+          <p class="thing-label">Returns one verdict.</p>
+          <p class="thing-desc">PURSUE &middot; NURTURE &middot; DECLINE &middot; FLAG. Every run. Not &ldquo;here are some considerations.&rdquo;</p>
+        </div>
+        <div class="thing-card">
+          <p class="thing-label">Drafts the response.</p>
+          <p class="thing-desc">PURSUE gets an outreach email with the warm intro already named. NURTURE gets a watchlist entry with one trigger. DECLINE is brief, professional, done.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. THE DUEL -->
+  <div class="duel-outer">
+    <div class="container">
+      <p class="eyebrow">The duel</p>
+
+      <div class="duel-input-wrap">
+        <p class="duel-input-label">Input</p>
+        <div class="duel-input-text">
+          Qualify Northwind Studios: indie action-adventure, no audio team, no publisher deal, no raise announced.
+        </div>
+      </div>
+
+      <div class="duel-columns">
+        <div class="duel-col generic">
+          <p class="duel-col-label">Generic AI</p>
+          <p class="duel-generic-text">&ldquo;Northwind Studios looks like a strong fit. They&rsquo;re an indie action-adventure studio with an active team and a recent title. We recommend reaching out to explore a partnership.&rdquo;</p>
+        </div>
+        <div class="duel-col sonar">
+          <p class="duel-col-label">Sonar</p>
+          <p class="sonar-verdict">DECLINE.</p>
+          <p class="sonar-reason">No funding from any source detected &mdash; publisher, raise, revenue, or grant. Can&rsquo;t hire on normal terms.</p>
+          <p class="sonar-meta">Score: 58/107 &middot; funding 0 &middot; audio gap 22 &middot; genre 10</p>
+        </div>
+      </div>
+
+      <p class="duel-payoff">Sonar doesn&rsquo;t profile studios. It screens them.</p>
+
+      <!-- Replace href with hosted mp4 URL when available -->
+      <div class="video-placeholder">
+        <span class="video-placeholder-label">Watch the duel &rarr;</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. WHO BUILT IT -->
+  <section>
+    <div class="container">
+      <p class="eyebrow">Who built it</p>
+      <p class="founder-body">
+        I got into AI to get out of a spreadsheet. Part of my job at a game-audio studio is scoring prospects by hand &mdash; who&rsquo;s funded, who&rsquo;s in production, who hasn&rsquo;t hired audio yet. The rubric, the studios, the contacts were already in the workspace I keep every day. I just had to hand over the judgment I&rsquo;d already been making.
+      </p>
+      <p class="founder-tagline">
+        Built by a game-audio studio&rsquo;s BD operator &mdash; I score these by hand. Sonar is the spreadsheet, escaped.
+      </p>
+    </div>
+  </section>
+
+  <!-- 5. GET IT -->
+  <section>
+    <div class="container">
+      <p class="eyebrow">Get it</p>
+      <a href="https://github.com/rocleemusic/sonar-operator" class="repo-url">
+        github.com/rocleemusic/sonar-operator
+      </a>
+
+      <ol class="setup-steps">
+        <li class="setup-step">
+          <span class="step-num">01</span>
+          <span class="step-text">Create a project in Claude. Enable web search.</span>
+        </li>
+        <li class="setup-step">
+          <span class="step-num">02</span>
+          <span class="step-text">Add every file in the folder to project knowledge.</span>
+        </li>
+        <li class="setup-step">
+          <span class="step-num">03</span>
+          <span class="step-text">
+            Set instructions: &ldquo;Read identity.md and rules.md. You are Sonar. Decide, don&rsquo;t ask.&rdquo;
+            <span class="step-paste">Then paste: Qualify [studio name]: [url]</span>
+          </span>
+        </li>
+      </ol>
+
+      <div class="secondary-links">
+        <!-- Replace # with hosted URLs when available -->
+        <a href="#" class="secondary-link">Judge Guide</a>
+        <a href="#" class="secondary-link">Pitch Deck</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <span class="footer-brand">Clean Cuts Interactive</span>
+    </div>
+  </footer>
+
+</body>
+</html>
