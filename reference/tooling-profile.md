@@ -35,8 +35,8 @@ profile:
 - **Motion tool → Remotion.**
   - *Invoke:* compositions live in `my-animations/animation-studio`. Write the comp, render via CLI, self-QA with a `remotion still` PNG before a full render. The brand ports in once (RDS→Remotion tokens). Splice the recorded VO via Remotion audio or ffmpeg.
   - *Windows invocation:* the default `npm run still` OOMs on large comps. Use PowerShell: `$env:NODE_OPTIONS="--max-old-space-size=4096"; .\node_modules\.bin\remotion.cmd still builds/index.ts --public-dir ./builds/public [CompId] [out.png] --frame=0`
-  - *Permission check (run before the smoke render):* read `.claude/settings.json` and check whether `node_modules\.bin\remotion.cmd` (or equivalent) is in the allow list. If it is not present → **stop and prompt:** "The Remotion smoke render requires `node_modules\.bin\remotion.cmd` to be pre-approved. Add it to `.claude/settings.json` → `permissions.allow`, then re-run." Do not attempt the render without it.
-  - *Reachable when:* Remotion is installed in `my-animations/animation-studio` AND the permission check passes. **Step 0 of any video run:** permission check → resolve the path junction → one-frame smoke render.
+  - *Reachable when:* Remotion is installed in `my-animations/animation-studio` AND `node_modules\.bin\remotion.cmd` is present in `.claude/settings.json` → `permissions.allow`. **Check both at ingestion, before the gates.** If the permission entry is missing → prompt at that point: "Remotion requires `node_modules\.bin\remotion.cmd` pre-approved in `.claude/settings.json`. Add it and re-run Shipper." Do not proceed to Gate 1 until resolved — or treat Remotion as unreachable and fall back to emitting a prompt for tier 6.
+  - **Step 0 of any video run:** resolve the path junction → one-frame smoke render.
 - **Deck tool → Open Design** (slide archetypes from the outline), **or Canva (MCP)** when a Canva brand template exists — feed the deck-outline's per-slide fields into the template. Otherwise prefer OD and treat Canva as an export target.
 - **Direct → none.** Text artifacts need no tool; Shipper writes them in the brand voice and the builder pastes them where they go.
 
