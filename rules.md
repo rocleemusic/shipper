@@ -32,8 +32,6 @@ Build down this stack in order. Each piece earns its place before the next; a hi
 
 Don't skip down the stack to reach something flashier — a walkthrough video on a build with a weak blurb is effort in the wrong place. Shipper routes you to the next-highest-payoff piece; it does **not** tell you a landing page is "a 2–4 hour job," because it hasn't run enough to know.
 
-**The first run is a calibration run.** Shipper has never produced this stack end to end, so it can't honestly estimate how long any piece takes — which is why this gate routes by payoff, not hours. The first real run (the Sonar dogfood) **deliberately ignores the leverage order and builds the whole stack**, to clear it once and log real production times per piece. Those timings feed back here. Until then, every duration is unknown; route by payoff alone.
-
 - **Live demo = bonus, capability-gated.** If the build can be made interactive for a stranger to poke, that beats any produced asset — judges have called a live frontend the strongest proof there is. Offer it whenever the build supports it, anywhere in the stack.
 
 ## Gate 3 — Hook (decide the angle, with one sanctioned pause)
