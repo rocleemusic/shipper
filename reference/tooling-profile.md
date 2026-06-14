@@ -34,8 +34,9 @@ profile:
   - The `user:` id is this profile's pointer to wherever the **brand kit** is registered in OD — the one place brand and tooling meet.
 - **Motion tool → Remotion.**
   - *Invoke:* compositions live in `my-animations/animation-studio`. Write the comp, render via CLI, self-QA with a `remotion still` PNG before a full render. The brand ports in once (RDS→Remotion tokens). Splice the recorded VO via Remotion audio or ffmpeg.
-  - *Windows invocation:* the default `npm run still` OOMs on large comps. Use `$env:NODE_OPTIONS="--max-old-space-size=4096"; .\node_modules\.bin\remotion.cmd still builds/index.ts --public-dir ./builds/public [CompId] [out.png] --frame=0` via PowerShell. Requires pre-approved permission in `.claude/settings.json` — add `node_modules\.bin\remotion.cmd` to the allow list before running.
-  - *Reachable when:* Remotion is installed in `my-animations/animation-studio`. **Step 0 of any video run:** resolve the path junction + a one-frame smoke render.
+  - *Windows invocation:* the default `npm run still` OOMs on large comps. Use PowerShell: `$env:NODE_OPTIONS="--max-old-space-size=4096"; .\node_modules\.bin\remotion.cmd still builds/index.ts --public-dir ./builds/public [CompId] [out.png] --frame=0`
+  - *Permission check (run before the smoke render):* read `.claude/settings.json` and check whether `node_modules\.bin\remotion.cmd` (or equivalent) is in the allow list. If it is not present → **stop and prompt:** "The Remotion smoke render requires `node_modules\.bin\remotion.cmd` to be pre-approved. Add it to `.claude/settings.json` → `permissions.allow`, then re-run." Do not attempt the render without it.
+  - *Reachable when:* Remotion is installed in `my-animations/animation-studio` AND the permission check passes. **Step 0 of any video run:** permission check → resolve the path junction → one-frame smoke render.
 - **Deck tool → Open Design** (slide archetypes from the outline), **or Canva (MCP)** when a Canva brand template exists — feed the deck-outline's per-slide fields into the template. Otherwise prefer OD and treat Canva as an export target.
 - **Direct → none.** Text artifacts need no tool; Shipper writes them in the brand voice and the builder pastes them where they go.
 
