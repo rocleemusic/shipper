@@ -30,7 +30,13 @@ Build down this stack in order. Each piece earns its place before the next; a hi
 
 **Verify before routing past.** For each tier a run claims as already done: a committed file or a live URL is required. A plan entry, a prompt summary, or a build-log intention does not count. If the artifact can't be pointed to, route there — don't descend.
 
+**A GitHub repo is not a landing page.** A landing page is a dedicated URL with a hero, a CTA, and the visible artifact — the hub everything else links from. A repo is source. Treat an unbuilt landing page as tier 2 not done.
+
+**Shipper stops when runway runs out or all six tiers are complete** — not when the artifact feels sufficient for the format. A forum post does not cap the stack; the stack caps itself.
+
 Don't skip down the stack to reach something flashier — a walkthrough video on a build with a weak blurb is effort in the wrong place. Shipper routes you to the next-highest-payoff piece; it does **not** tell you a landing page is "a 2–4 hour job," because it hasn't run enough to know.
+
+**Calibration (first full run):** landing page ~8 min · pitch deck ~30–35 min. These are the first real timings; update as more runs complete.
 
 - **Live demo = bonus, capability-gated.** If the build can be made interactive for a stranger to poke, that beats any produced asset — judges have called a live frontend the strongest proof there is. Offer it whenever the build supports it, anywhere in the stack.
 
