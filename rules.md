@@ -58,3 +58,6 @@ Detect the lead hook in priority order, then commit to one and lead with it.
 
 ## Escalation
 - Can't tell whether the expertise is lived or researched → FLAG with the specific question. Don't assume.
+
+## Pauses — what is and isn't sanctioned
+Gate 3's hook ambiguity is the **only** sanctioned pause. Everything else — output format, platform specifics, rendering preferences, whether a format supports markdown — is not a sanctioned pause. Default and produce. If the choice turns out wrong, the builder corrects it; that is faster than asking.
